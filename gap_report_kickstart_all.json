@@ -1,0 +1,1536 @@
+[
+  {
+    "report_id": "cc8c1a45-71aa-4892-ae99-ee96e6c19b0c",
+    "job_id": "2614cb2d-0734-4859-9670-071be24ac1a4",
+    "generated_at": "2026-06-09T19:33:21.660701",
+    "documents_analyzed": [
+      "Enhancing environmental crime investigations with AI"
+    ],
+    "total_gaps": 11,
+    "high_risk_count": 10,
+    "medium_risk_count": 1,
+    "low_risk_count": 0,
+    "gaps": [
+      {
+        "gap_id": "67e9340d-e525-49bc-9317-6e40c0b31156",
+        "gap_category": "STRUCTURAL",
+        "gap_type": "Structural Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": null,
+        "description": "Missing required 'project name' section in project_plan document. The project_plan template requires this section to be present and populated.",
+        "evidence_sources": [
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'project name' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "project name"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          },
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'scope' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "scope"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          },
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'tasks' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "tasks"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 8.5,
+        "impact": 8.0,
+        "confidence": 0.88,
+        "frequency": 3,
+        "final_score": 8.718,
+        "risk_level": "High",
+        "priority_score": 8.718,
+        "affected_entities": [],
+        "root_cause": "The project_plan template was not correctly followed, resulting in omission of mandatory structural sections (project name, scope, tasks).",
+        "recommendation": "Update the project_plan to comply with the template by adding and populating the mandatory 'Project Name', 'Scope', and 'Tasks' sections, ensuring each field is specific, unambiguous, and aligned with any existing project charter or requirement documents.",
+        "llm_reasoning": "The absence of core structural elements in the project_plan severely reduces its usability as a guiding and reference document, warranting high severity. Because missing name, scope, and tasks can cause misalignment, duplicated work, and governance issues across stakeholders, the risk and therefore priority are high.",
+        "ranked_at": "2026-06-09T19:33:20.794125"
+      },
+      {
+        "gap_id": "12f715bc-dcc4-410c-b3aa-e833d1da81ad",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": "Key features",
+        "description": "Missing assumptions and constraints regarding legal validity, jurisdiction, and admissibility of AI-derived correlations and suggestions (e.g., scope of applicable jurisdictions, versioning of laws, and how outputs can or cannot be used as evidence in investigations).",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "Phrases like \"cross-domain correlations against a vast library of open-source data\", \"prioritized list of regulations\", and \"Providing a ranked list of relevant laws and jurisprudence\" do not specify which jurisdictions are covered, how currency/versioning of legal sources is managed, or whether outputs are advisory or evidentiary. This is critical for legal risk, operational use by officers, and decision-making reliability.",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 8.5,
+        "impact": 9.0,
+        "confidence": 0.88,
+        "frequency": 1,
+        "final_score": 8.498,
+        "risk_level": "High",
+        "priority_score": 8.498,
+        "affected_entities": [],
+        "root_cause": "The feature description emphasizes AI-powered legal correlations without explicitly documenting legal assumptions, jurisdictional limits, and evidentiary constraints for investigative use.",
+        "recommendation": "Add a dedicated 'Legal Scope, Jurisdiction, and Evidentiary Constraints' subsection under Key Features that (1) enumerates supported jurisdictions and law versions, (2) clarifies that outputs are advisory and not inherently admissible evidence, (3) states assumptions and known limitations around legal completeness and timeliness, and (4) references a separate governance or compliance document that defines how investigators must validate AI-suggested correlations before using them in official proceedings.",
+        "llm_reasoning": "Because the product operates in a legally sensitive domain, ambiguity about jurisdictional coverage and evidentiary use can cause serious compliance failures and misinformed investigative decisions. Clarifying these constraints is high priority to prevent misuse of AI outputs as de facto legal determinations and to reduce regulatory and litigation risk.",
+        "ranked_at": "2026-06-09T19:33:21.255756"
+      },
+      {
+        "gap_id": "9a1e6a74-c7de-49eb-8a04-b0b05bf9f035",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": "Key features",
+        "description": "Unclear commitment about the level of automation vs. human oversight in identifying violations and suggesting laws, leading to ambiguity on responsibility, accountability, and required review processes for investigative use.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "Statements such as \"Automatically identifying violations\" and \"Providing a ranked list of relevant laws and jurisprudence\" do not clarify whether these are preliminary hints requiring mandatory human legal review or system determinations that may be relied upon directly, which affects operational workflows and risk management.",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 9.0,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 8.002,
+        "risk_level": "High",
+        "priority_score": 8.002,
+        "affected_entities": [],
+        "root_cause": "The feature descriptions use ambiguous automation language without explicitly defining the required level of human review, decision authority, and accountability for investigative use.",
+        "recommendation": "Add a dedicated subsection under 'Key features' (e.g., 'Automation level and human oversight') that, for each feature, explicitly states whether outputs are advisory or determinative, specifies mandatory human review and approval steps, and clarifies responsibility and accountability for using AI-generated findings in investigations.",
+        "llm_reasoning": "Because the system operates in a high-stakes legal and regulatory context, ambiguity about automation and oversight creates significant operational, legal, and ethical risk. Clarifying the human-in-the-loop model directly in the feature descriptions is therefore a high-priority documentation fix to prevent misinterpretation and misuse of the system.",
+        "ranked_at": "2026-06-09T19:33:21.092153"
+      },
+      {
+        "gap_id": "87bd8b43-0dfa-4c4f-8d5d-389119f3b7f7",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": "Goal",
+        "description": "The target user groups, operational context, and scope of environmental crime domains are not defined, making it unclear for whom and for which types of investigations the AI solution is being developed.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "“develop an AI solution that helps identify relevant laws and potential violations across domains, accelerating the research phase to enable faster investigations.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.0,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.563,
+        "risk_level": "High",
+        "priority_score": 7.563,
+        "affected_entities": [],
+        "root_cause": "The goal statement was written at a generic level without eliciting or capturing concrete user groups, usage contexts, and domain boundaries.",
+        "recommendation": "Expand the Goal section into a 'Goal and Scope' subsection that explicitly lists primary target users (e.g., environmental inspectors, prosecutors, NGO analysts), typical operational contexts (e.g., field inspections, case-building, policy analysis), and the specific environmental crime domains included and excluded (e.g., pollution, illegal logging, wildlife trafficking), using bullet points for clarity.",
+        "llm_reasoning": "Without defined users and domains, the AI solution risks being designed too broadly or misaligned with real investigative workflows, reducing its usefulness and adoption. Clarifying audience and scope now will better guide requirements, data selection, and evaluation criteria, preventing costly rework later.",
+        "ranked_at": "2026-06-09T19:33:21.658621"
+      },
+      {
+        "gap_id": "ffd067c7-da90-4c41-81dd-6fca6e16aae9",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": "Approach",
+        "description": "The scope and depth of each phase are vaguely defined, making it unclear what concrete deliverables, decision points, and success criteria are expected from the three phases, which hinders decision making, traceability, and operational planning.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "The approach consists of three phases:\n\n1. **Use Case Identification:** Deeply understanding the current process and defining the specific problem to be solved.\n2. **Model Development:** Building the tech infrastructure and training the core AI models.\n3. **Implementation and Adoption:** Integrating the solution into the workflows of the Police.",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.0,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.563,
+        "risk_level": "High",
+        "priority_score": 7.563,
+        "affected_entities": [],
+        "root_cause": "The phase descriptions are conceptual and narrative-only, lacking explicit definitions of phase deliverables, decision gates, owners, and measurable success criteria.",
+        "recommendation": "For each of the three phases in the Approach section, add a short structured subsection that explicitly defines: (a) objectives, (b) concrete deliverables (e.g., use-case backlog, data schema, model evaluation report), (c) key decision points and exit criteria (go/no-go conditions), (d) responsible roles, and (e) success metrics, and summarize these in a simple phase-gate table for easier planning and traceability.",
+        "llm_reasoning": "Because this is a multi-phase AI investigation project, the lack of clear outputs and decision gates materially degrades the usefulness of the approach for planning and governance. The business risk is high: ambiguous phases can cause scope creep, misaligned expectations with investigators and stakeholders, and weak auditability in a sensitive regulatory domain, so fixing this should be prioritized over more cosmetic documentation improvements.",
+        "ranked_at": "2026-06-09T19:33:20.981385"
+      },
+      {
+        "gap_id": "61c164a4-b403-4270-9562-ab47f5fbf4c9",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": "Approach",
+        "description": "The phases do not state any explicit dependencies or preconditions (data availability, legal/ethical approvals, access to police systems, domain expertise) required before model development and implementation, which are critical for feasibility, risk assessment, and planning.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "2. **Model Development:** Building the tech infrastructure and training the core AI models.\n3. **Implementation and Adoption:** Integrating the solution into the workflows of the Police.",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.0,
+        "impact": 8.5,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.535,
+        "risk_level": "High",
+        "priority_score": 7.535,
+        "affected_entities": [],
+        "root_cause": "The approach description focuses on sequential project phases but omits prerequisite conditions and dependencies that are assumed rather than explicitly documented.",
+        "recommendation": "Extend the 'Approach' section with a short 'Prerequisites and Dependencies' sub-section for each phase (especially Model Development and Implementation) that explicitly lists required data availability and quality, legal and ethical approvals, access to police/IT systems, and required domain expertise, and reference these as entry criteria for starting each phase.",
+        "llm_reasoning": "Missing explicit dependencies makes the plan look more straightforward than it is, which can mislead stakeholders about feasibility, timelines, and risks. Because this project involves law enforcement data, AI models, and legal/ethical constraints, failing to document these preconditions creates a high operational and compliance risk, warranting high priority remediation.",
+        "ranked_at": "2026-06-09T19:33:21.198932"
+      },
+      {
+        "gap_id": "06d1cc44-80e5-4b3f-a891-76ab1407f656",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": "Goal",
+        "description": "The level and nature of the claimed impact on prosecution (“boost prosecution efforts”) and public outcomes (“protecting the environment and public health”) are not specified, leaving ambiguity about whether these are aspirational goals, measurable project objectives, or required success criteria.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "“the tool can boost prosecution efforts and contribute to protecting the environment and public health.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 7.0,
+        "confidence": 0.88,
+        "frequency": 1,
+        "final_score": 7.123,
+        "risk_level": "High",
+        "priority_score": 7.123,
+        "affected_entities": [],
+        "root_cause": "Outcome statements blur aspirations, objectives, and success criteria without defining measurable impact or tying them to project requirements.",
+        "recommendation": "Revise the Goal section to explicitly classify these outcomes as (a) vision-level aspirations or (b) concrete project objectives, and for any objectives, define measurable success criteria (e.g., target percentage increase in successful prosecutions, reduction in investigation time, or specific environmental/public health indicators), ideally in a short ‘Intended Impact and Metrics’ subsection.",
+        "llm_reasoning": "Because the claimed impacts are central to the project’s purpose, ambiguity about whether they are aspirational or required outcomes can misalign stakeholders and lead to mismatched expectations about success. Clarifying and, where appropriate, operationalizing these goals into measurable criteria is therefore a high-priority documentation fix to guide design, funding decisions, and later evaluation.",
+        "ranked_at": "2026-06-09T19:33:21.253910"
+      },
+      {
+        "gap_id": "feaa76cf-e03f-40b2-b4a3-979e5c165b55",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": null,
+        "description": "1 isolated entity/entities have no relationships to the rest of the knowledge graph: Environmental crime.",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "Isolated nodes detected (zero-degree vertices)",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Environmental crime"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 6.5,
+        "impact": 7.5,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 6.848,
+        "risk_level": "High",
+        "priority_score": 6.848,
+        "affected_entities": [
+          "Environmental crime"
+        ],
+        "root_cause": "The core domain concept 'Environmental crime' is mentioned or modeled without being explicitly defined or linked to related entities, leaving it isolated in the knowledge graph.",
+        "recommendation": "Create or expand a dedicated subsection or node that defines 'Environmental crime' (scope, examples, legal/operational context) and explicitly link it to related entities in the document (e.g., AI techniques used, data sources, investigation workflows, stakeholders, and legal frameworks).",
+        "llm_reasoning": "Because environmental crime is the central domain concept, keeping it isolated weakens conceptual clarity and makes the graph less useful for navigation and reuse. Linking this node to investigative processes, AI methods, and regulatory context is critical for accurate understanding and downstream implementation, so the gap warrants high priority remediation.",
+        "ranked_at": "2026-06-09T19:33:21.172215"
+      },
+      {
+        "gap_id": "48307ccb-aee5-44b0-95df-4d9b3587e473",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": null,
+        "description": "Knowledge graph has 2 disconnected components (silos), suggesting that parts of the documentation are not linked to each other. Components: [['AI-powered intelligence assistant', 'Prioritized legal suggestions', 'Model Development phase', 'Provide prioritized list of regulations', 'Boost prosecution efforts and protect environment and public health', 'Retrieval-Augmented Generation pipeline', 'Hybrid search and reranking', 'Implementation and Adoption phase', 'Scalable AI adoption and user trust', 'Environmental law and related domains', 'Accelerate research phase of investigations', 'Identify relevant laws and potential violations across domains', 'Faster investigation throughput', 'High Impact Environmental Crime team', 'Large Language Model', 'Automated legal context enrichment', 'Higher case quality', 'Public data integration', 'Politie Nederland', 'Process unstructured research documents', 'Cross-domain correlation', 'Enhanced expertise of intelligence officers', 'KickstartAI', 'Use Case Identification phase', 'Vector database'], ['Environmental crime']].",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "2 weakly connected components detected",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "AI-powered intelligence assistant",
+              "Prioritized legal suggestions",
+              "Model Development phase",
+              "Provide prioritized list of regulations",
+              "Boost prosecution efforts and protect environment and public health",
+              "Retrieval-Augmented Generation pipeline",
+              "Hybrid search and reranking",
+              "Implementation and Adoption phase",
+              "Scalable AI adoption and user trust",
+              "Environmental law and related domains",
+              "Accelerate research phase of investigations",
+              "Identify relevant laws and potential violations across domains",
+              "Faster investigation throughput",
+              "High Impact Environmental Crime team",
+              "Large Language Model",
+              "Automated legal context enrichment",
+              "Higher case quality",
+              "Public data integration",
+              "Politie Nederland",
+              "Process unstructured research documents",
+              "Cross-domain correlation",
+              "Enhanced expertise of intelligence officers",
+              "KickstartAI",
+              "Use Case Identification phase",
+              "Vector database",
+              "Environmental crime"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 6.5,
+        "impact": 7.5,
+        "confidence": 0.84,
+        "frequency": 1,
+        "final_score": 6.848,
+        "risk_level": "High",
+        "priority_score": 6.848,
+        "affected_entities": [
+          "AI-powered intelligence assistant",
+          "Prioritized legal suggestions",
+          "Model Development phase",
+          "Provide prioritized list of regulations",
+          "Boost prosecution efforts and protect environment and public health",
+          "Retrieval-Augmented Generation pipeline",
+          "Hybrid search and reranking",
+          "Implementation and Adoption phase",
+          "Scalable AI adoption and user trust",
+          "Environmental law and related domains",
+          "Accelerate research phase of investigations",
+          "Identify relevant laws and potential violations across domains",
+          "Faster investigation throughput",
+          "High Impact Environmental Crime team",
+          "Large Language Model",
+          "Automated legal context enrichment",
+          "Higher case quality",
+          "Public data integration",
+          "Politie Nederland",
+          "Process unstructured research documents",
+          "Cross-domain correlation",
+          "Enhanced expertise of intelligence officers",
+          "KickstartAI",
+          "Use Case Identification phase",
+          "Vector database",
+          "Environmental crime"
+        ],
+        "root_cause": "The documentation describes environmental crime as a domain but fails to explicitly connect it to the detailed AI solution concepts, leaving the central use-case node isolated in the knowledge graph.",
+        "recommendation": "Add a short framing subsection (e.g., 'How the AI assistant supports environmental crime investigations') that explicitly links 'Environmental crime' to each major solution concept (AI-powered intelligence assistant, prioritized legal suggestions, RAG pipeline, model development and adoption phases, benefits) and ensure cross-references or anchor links are inserted so the knowledge graph connects these nodes.",
+        "llm_reasoning": "The central domain concept 'Environmental crime' being disconnected from the implementation and benefit nodes makes the documentation harder to navigate and weakens traceability from problem space to solution. Because this is a core framing issue affecting understanding for investigators and stakeholders, it warrants a high priority fix even though the underlying technical content exists.",
+        "ranked_at": "2026-06-09T19:33:21.239797"
+      },
+      {
+        "gap_id": "232568f9-9b27-4e05-bc8e-804ef0ae1be9",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": "Approach",
+        "description": "The requirement 'Implementation and Adoption phase' has no justification or rationale linked to it (missing 'justifies' or 'derived_from' relationship).",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "Domain constraint violated: requirement node without rationale link",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Implementation and Adoption phase"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 6.5,
+        "impact": 7.0,
+        "confidence": 0.84,
+        "frequency": 1,
+        "final_score": 6.628,
+        "risk_level": "High",
+        "priority_score": 6.628,
+        "affected_entities": [
+          "Implementation and Adoption phase"
+        ],
+        "root_cause": "The Implementation and Adoption phase was added as a standalone requirement without being explicitly traced back to any design decision, stakeholder need, or higher-level requirement.",
+        "recommendation": "Identify the upstream requirements or decisions that necessitate an Implementation and Adoption phase and explicitly add a 'justifies' or 'derived_from' relationship from those nodes to this requirement, including a brief rationale describing why this phase is essential for operationalizing AI in environmental crime investigations.",
+        "llm_reasoning": "A core lifecycle phase with no traceability obscures why it exists and weakens the overall coherence of the approach, degrading documentation quality and maintainability. Because implementation and adoption directly affect successful deployment and stakeholder uptake, leaving it unjustified introduces significant operational risk, warranting a High priority fix.",
+        "ranked_at": "2026-06-09T19:33:21.095442"
+      },
+      {
+        "gap_id": "a896d185-c9d1-4ae2-9455-0b92c154f172",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "88be0621-7916-4ce7-be67-d239892dad7e",
+        "document_title": "Enhancing environmental crime investigations with AI",
+        "affected_document_section": "Key features",
+        "description": "The requirement 'Process unstructured research documents' has no justification or rationale linked to it (missing 'justifies' or 'derived_from' relationship).",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "Domain constraint violated: requirement node without rationale link",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Process unstructured research documents"
+            ],
+            "graph_edges": []
+          },
+          {
+            "source_layer": "graph",
+            "description": "Domain constraint violated: requirement node without rationale link",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Provide prioritized list of regulations"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 5.5,
+        "impact": 6.5,
+        "confidence": 0.78,
+        "frequency": 2,
+        "final_score": 5.675,
+        "risk_level": "Medium",
+        "priority_score": 5.675,
+        "affected_entities": [
+          "Process unstructured research documents",
+          "Provide prioritized list of regulations"
+        ],
+        "root_cause": "The requirement to process unstructured research documents was captured without explicitly tracing it back to a higher-level business need or regulatory-analysis objective.",
+        "recommendation": "Create and link a justification node (e.g. derived_from or justifies) that explicitly traces 'Process unstructured research documents' to the investigative goal of producing a prioritized list of relevant regulations, clarifying why unstructured document processing is needed and what outcomes it enables.",
+        "llm_reasoning": "The missing relationship weakens traceability between a functional capability and a core investigative outcome but does not completely block understanding of the system’s purpose. However, it raises the risk of future misalignment or de-scoping of a capability that appears isolated from business value, so it warrants a medium priority fix to preserve requirement traceability and design integrity.",
+        "ranked_at": "2026-06-09T19:33:21.215455"
+      }
+    ],
+    "pipeline_metadata": {
+      "documents_count": 1,
+      "doc_types": [
+        "project_plan"
+      ],
+      "gap_category_breakdown": {
+        "STRUCTURAL": 1,
+        "IMPLICIT_EXPRESSION": 3,
+        "SEMANTIC": 3,
+        "RELATIONAL": 4
+      },
+      "average_priority_score": 7.364,
+      "average_confidence": 0.858,
+      "elapsed_seconds": 25.3,
+      "raw_gaps_detected": 14
+    }
+  },
+  {
+    "report_id": "0e0ea576-b292-4cab-9cfe-a3d8325dbca7",
+    "job_id": "c8dd13bd-ba1d-48eb-9792-0024d47c8aad",
+    "generated_at": "2026-06-09T19:33:46.537034",
+    "documents_analyzed": [
+      "Supporting financial health with a GenAI chatbot"
+    ],
+    "total_gaps": 15,
+    "high_risk_count": 15,
+    "medium_risk_count": 0,
+    "low_risk_count": 0,
+    "gaps": [
+      {
+        "gap_id": "34645e0d-aa48-4447-b5a4-21e60cac5ccd",
+        "gap_category": "STRUCTURAL",
+        "gap_type": "Structural Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": null,
+        "description": "Missing required 'project name' section in project_plan document. The project_plan template requires this section to be present and populated.",
+        "evidence_sources": [
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'project name' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "project name"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          },
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'scope' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "scope"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          },
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'tasks' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "tasks"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 8.5,
+        "impact": 8.0,
+        "confidence": 0.9,
+        "frequency": 3,
+        "final_score": 8.718,
+        "risk_level": "High",
+        "priority_score": 8.718,
+        "affected_entities": [],
+        "root_cause": "The project_plan was created or updated without following the required template sections for project name, scope, and tasks, indicating weak adherence to documentation standards.",
+        "recommendation": "Populate the project_plan with a clearly defined 'Project name' section, followed immediately by explicit 'Scope' and 'Tasks' sections that conform to the standard template (including in-scope and out-of-scope items, key deliverables, milestones, and owner-assigned task list), and enforce a pre-approval checklist so future project_plans cannot be finalized while these fields are missing.",
+        "llm_reasoning": "Missing project name, scope, and tasks makes the plan effectively non-operational, increasing the risk of confusion over ownership, objectives, and delivery responsibilities. Because this is a core governance artifact for the GenAI chatbot initiative, the absence of these foundational sections justifies a high priority fix to avoid misalignment and rework later in the project lifecycle.",
+        "ranked_at": "2026-06-09T19:33:45.632578"
+      },
+      {
+        "gap_id": "6430d4a1-cc9d-4cff-877b-e03875190e72",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Key features",
+        "description": "No explicit statement of required data sources, access mechanisms, or security/compliance constraints for connecting to users’ transaction histories and financial profiles, making it unclear what systems must be integrated, under what regulatory requirements (e.g., banking/financial data protection), and with which authentication/authorization flows.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "“Contextual Data Retrieval: Seamlessly connecting the assistant to the user’s transaction history and financial profiles to provide answers rooted in real, personal data.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 8.5,
+        "impact": 9.2,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 8.585,
+        "risk_level": "High",
+        "priority_score": 8.585,
+        "affected_entities": [],
+        "root_cause": "Security, data-source, and compliance requirements for accessing sensitive financial data were implicitly assumed rather than explicitly specified in the feature description.",
+        "recommendation": "Add a dedicated 'Data Sources, Access & Compliance' subsection under Key features that explicitly lists required data systems (e.g., core banking, card processor, CRM), access mechanisms (APIs, event streams, data warehouses), authentication/authorization flows (e.g., OAuth2/OIDC with SSO, step-up auth, consent capture), and applicable regulatory/compliance constraints (e.g., PCI DSS, GLBA, GDPR, local banking rules), and link it to a security/architecture reference for implementation details.",
+        "llm_reasoning": "The feature promises deep access to users’ financial data without stating how that access is governed, which significantly degrades documentation clarity and can lead to insecure or non-compliant integrations. Because mishandling regulated financial data creates high legal, security, and trust risk, the gap warrants high remediation priority.",
+        "ranked_at": "2026-06-09T19:33:46.038149"
+      },
+      {
+        "gap_id": "19d12c77-f0b0-4f40-a580-db19c17ed309",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Expected Results",
+        "description": "Missing explicit definition of measurement approach, metrics, and data dependencies for the two core outcome questions (how ‘effectiveness’, ‘successfully diverted volume’, ‘financial stress’, and ‘long-term financial stability’ will be operationalised and measured, including required data sources and time windows).",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "“Assessing the assistant's effectiveness in supporting users who engage proactively, measuring the successfully diverted volume of users who avoid entering a formal arrears state.” and “Measuring the long-term financial stability of users following their interaction with the assistant, specifically tracking their ability to maintain a healthy account status over an extended period.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 8.5,
+        "impact": 9.0,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 8.498,
+        "risk_level": "High",
+        "priority_score": 8.498,
+        "affected_entities": [],
+        "root_cause": "Outcome statements were drafted at a conceptual level without being translated into concrete, operationalised measurement definitions and data requirements.",
+        "recommendation": "Add a dedicated 'Measurement & Evaluation Framework' subsection under Expected Results that explicitly defines for each outcome term (‘effectiveness’, ‘successfully diverted volume’, ‘financial stress’, ‘long-term financial stability’) the measurement approach, precise metrics and formulas, inclusion/exclusion criteria, required data sources (e.g., chatbot logs, account/arrears systems, credit data, survey tools), and observation time windows, and validate this with analytics and risk stakeholders.",
+        "llm_reasoning": "Because the assistant’s value proposition hinges on demonstrable impact on arrears and financial health, undocumented metrics and data dependencies create a high risk of unmeasurable or disputed success criteria. Formalising the measurement framework now prevents misaligned expectations, enables implementable analytics, and reduces future rework once the solution is deployed.",
+        "ranked_at": "2026-06-09T19:33:46.039468"
+      },
+      {
+        "gap_id": "f31eb922-86c3-4713-9e87-b580dbf4f23a",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Approach",
+        "description": "The feature 'Action-oriented agent capabilities' cannot be traced back to any requirement or goal in the knowledge graph — it appears disconnected from the project rationale.",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "feature not connected to any goal/requirement anchor",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Action-oriented agent capabilities"
+            ],
+            "graph_edges": []
+          },
+          {
+            "source_layer": "graph",
+            "description": "task not connected to any goal/requirement anchor",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Turn automatic savings on"
+            ],
+            "graph_edges": []
+          },
+          {
+            "source_layer": "graph",
+            "description": "task not connected to any goal/requirement anchor",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Set up budget alerts"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.0,
+        "confidence": 0.86,
+        "frequency": 3,
+        "final_score": 8.223,
+        "risk_level": "High",
+        "priority_score": 8.223,
+        "affected_entities": [
+          "Action-oriented agent capabilities",
+          "Turn automatic savings on",
+          "Set up budget alerts"
+        ],
+        "root_cause": "The 'Action-oriented agent capabilities' feature was introduced as a solution concept without being explicitly mapped to any upstream goals, requirements, or user needs in the knowledge graph.",
+        "recommendation": "Update the knowledge graph and the Approach section to explicitly link 'Action-oriented agent capabilities' (and its subfeatures like 'Turn automatic savings on' and 'Set up budget alerts') to documented goals or requirements, or else justify and document them as a new, approved requirement with a short rationale and decision record.",
+        "llm_reasoning": "A key design feature that is not traceable to any goal or requirement undermines the integrity of the requirements-to-solution mapping and can lead to scope creep or unjustified complexity. Because this capability directly affects core user flows and financial actions, resolving the traceability gap should be treated as a high priority to maintain alignment with business and regulatory expectations.",
+        "ranked_at": "2026-06-09T19:33:46.212431"
+      },
+      {
+        "gap_id": "05a7361a-debe-43bc-92c7-eba2287cbf5c",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "The Problem",
+        "description": "The problem statement implicitly commits to providing tailored, human-like responses based on bank data without clarifying constraints around data usage, privacy, or regulatory compliance, leaving it unclear whether the envisioned solution is informational only, advisory, or bordering on regulated financial advice.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "“banks provide a wealth of data – such as transaction histories and spending categorizations…” and “develop a GenAI solution that can understand financial queries and provide tailored, human-like responses, ultimately helping… regain control over their financial health.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 9.0,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 8.002,
+        "risk_level": "High",
+        "priority_score": 8.002,
+        "affected_entities": [],
+        "root_cause": "The problem statement blends personalization with bank data usage without explicitly defining solution scope, data constraints, or regulatory posture (informational vs. advisory).",
+        "recommendation": "Amend 'The Problem' section to explicitly state whether the chatbot is informational-only or advisory, and add a short 'Regulatory and Data Use Constraints' subsection that: (1) clarifies data types and anonymization/pseudonymization expectations, (2) references applicable banking/privacy regulations and high-level compliance assumptions, and (3) defines explicit out-of-scope behaviors (e.g., no personalized investment or credit decisions) to bound the intended solution.",
+        "llm_reasoning": "Because this is a financial-services GenAI use case, ambiguity about data usage and whether the bot provides regulated advice introduces substantial legal, compliance, and trust risk. Clarifying scope and regulatory posture early in the problem statement is both high-leverage and straightforward to implement, warranting high priority despite moderate documentation effort required.",
+        "ranked_at": "2026-06-09T19:33:46.187516"
+      },
+      {
+        "gap_id": "43ba9544-f8c7-4e3d-8310-2046c6026541",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Approach",
+        "description": "The transition from an informational tool to an “action-oriented agent” lacks clarity on the decision boundaries and governance (which actions are in scope, who authorizes them, required controls, and rollback mechanisms), creating ambiguity about the level of autonomy and responsibility the system will have.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "“Moving from an informational tool (answering questions) to an 'action-oriented agent' that can execute tasks like turning automatic savings on or setting up budget alerts directly within the chat.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 9.0,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 8.002,
+        "risk_level": "High",
+        "priority_score": 8.002,
+        "affected_entities": [],
+        "root_cause": "The documentation introduces an action-capable agent without explicitly defining its authorization boundaries, governance model, and operational safeguards.",
+        "recommendation": "Add a dedicated 'Action Governance & Autonomy' subsection in the Approach that explicitly lists in-scope vs out-of-scope actions, decision and authorization boundaries (including human-in-the-loop points), required controls and monitoring, and defined rollback/undo mechanisms for each class of action, and link this to responsible roles or approval processes.",
+        "llm_reasoning": "Because the chatbot can initiate financial actions, unclear autonomy and governance create significant compliance, security, and customer-trust risks. The priority is high: clarifying decision boundaries and controls is essential before moving from informational responses to task execution in a financial domain.",
+        "ranked_at": "2026-06-09T19:33:45.635465"
+      },
+      {
+        "gap_id": "5adf4bb5-2c58-4161-84c0-0cb6b8431e51",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Key features",
+        "description": "The scope and boundaries of “action-taking capabilities” are not defined (e.g., what concrete financial actions are in-scope, what requires user confirmation, and what operational or risk controls are in place), creating ambiguity about the level of autonomy, liability implications, and implementation priorities.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "“Action-Taking Capabilities: Developing ‘agentic’ features where the assistant can perform concrete actions, such as resolving issues end-to-end without redirecting the user.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 9.0,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 8.002,
+        "risk_level": "High",
+        "priority_score": 8.002,
+        "affected_entities": [],
+        "root_cause": "The document introduces agentic ‘action-taking capabilities’ at a conceptual level without specifying concrete in-scope actions, required confirmations, or control mechanisms.",
+        "recommendation": "Add a dedicated subsection under Key features (e.g., 'Action-Taking Scope and Controls') that (1) lists specific allowed actions (e.g., scheduling payments, updating contact details, initiating support tickets), (2) explicitly lists out-of-scope or prohibited actions (e.g., opening new credit lines, changing KYC data, making large transfers), (3) defines when explicit user confirmation or step-up authentication is required (with thresholds and examples), and (4) describes the operational, compliance, and risk controls applied (approval flows, limits, audit logging, and human-in-the-loop handoff), linking to any governing risk or product policies.",
+        "llm_reasoning": "Ambiguity around what financial actions the chatbot can autonomously perform directly affects legal, compliance, and customer-trust considerations, so the documentation gap materially degrades quality and alignment. Because this also drives implementation scope, risk controls, and liability assumptions, clarifying the action-taking boundaries is a high-priority fix for both design and governance stakeholders.",
+        "ranked_at": "2026-06-09T19:33:46.536691"
+      },
+      {
+        "gap_id": "04a2e745-2b0f-479d-861a-891166036c65",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "The Problem",
+        "description": "The target user segments and their constraints (e.g., language level, digital literacy, risk profile, regulatory status such as vulnerable customers) are not specified, making it unclear whose problems are actually being solved and what requirements the GenAI solution must meet.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "“Within the Netherlands, the scale of this challenge is significant: 47% of households struggle to keep a clear overview of their financial situation…” and “ING and KickstartAI are partnering to develop a GenAI solution that can understand financial queries and provide tailored, human-like responses…”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.5,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.783,
+        "risk_level": "High",
+        "priority_score": 7.783,
+        "affected_entities": [],
+        "root_cause": "The problem statement generalizes 'households' without translating this into clearly defined, prioritized user segments with explicit constraints and regulatory considerations.",
+        "recommendation": "Add a dedicated 'Target Users and Constraints' subsection under 'The Problem' that (1) enumerates primary and secondary user segments (e.g., digitally savvy retail customers, low digital-literacy customers, formally classified vulnerable customers, small business owners), (2) specifies their key constraints and characteristics (language level, digital literacy, financial risk profile, regulatory status, accessibility needs), and (3) maps these segments to concrete requirements the GenAI chatbot must satisfy (e.g., tone, explainability, safeguards, language support, escalation paths).",
+        "llm_reasoning": "Without explicit user segments and constraints, the document risks driving a one-size-fits-all solution that may breach regulatory expectations for vulnerable or regulated customers and fail usability needs for key groups. This gap directly affects solution design and compliance, so it warrants high priority despite the relatively complete macro-level problem description.",
+        "ranked_at": "2026-06-09T19:33:46.086752"
+      },
+      {
+        "gap_id": "9966e90e-7736-4b58-8a3f-5cf9db233836",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Goals",
+        "description": "The goal assumes access to, and real-time processing of, a customer’s financial data but does not specify data sources, system integrations, or prerequisite infrastructure (e.g., core banking systems, data platforms, consent mechanisms). This missing context affects feasibility, scope, and dependency management.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "“…analyze a customer’s financial data in real-time…”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.5,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 7.783,
+        "risk_level": "High",
+        "priority_score": 7.783,
+        "affected_entities": [],
+        "root_cause": "The goals conflate business intent with technical capability and omit explicit assumptions about required data sources, integrations, and infrastructure.",
+        "recommendation": "Augment the Goals section with a short 'Data & Integration Assumptions' subsection that explicitly lists expected financial data sources, required system integrations (e.g., core banking, data platform, consent/identity systems), and real-time processing constraints, and cross-link it to the architecture or prerequisites sections.",
+        "llm_reasoning": "Because real-time access to financial data drives feasibility, scope, and dependencies, leaving data sources and integrations implicit significantly degrades the usefulness and reliability of the document. The gap creates high business and delivery risk by encouraging stakeholders to assume capabilities or readiness that may not exist, so it warrants high priority remediation.",
+        "ranked_at": "2026-06-09T19:33:45.634810"
+      },
+      {
+        "gap_id": "2a26d8f0-d8e2-40de-a7e3-265cd3805143",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Approach",
+        "description": "The technical and data dependencies required for the RAG architecture (sources, update mechanisms, access rights, and quality controls for ING, Nibud, and Geldfit content) are not specified, making it unclear what must be in place for the solution to function and remain up to date.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "“Designing a Retrieval-Augmented Generation (RAG) framework that allows the LLM to access specific documentation on financial health from ING, Nibud & Geldfit.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.5,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.783,
+        "risk_level": "High",
+        "priority_score": 7.783,
+        "affected_entities": [],
+        "root_cause": "The RAG design is described at a conceptual level without specifying concrete data sources, integration mechanisms, or governance requirements needed for operational viability.",
+        "recommendation": "Extend the Approach section with a dedicated 'RAG Data & Technical Dependencies' subsection that explicitly lists: (1) all source systems and repositories for ING, Nibud, and Geldfit content (including formats and locations); (2) update and sync mechanisms (pull/push frequency, pipelines, monitoring); (3) access rights and security requirements (ownership, authentication, consent boundaries, data residency); and (4) quality controls (curation steps, validation checks, versioning, and deprecation rules), and link this subsection to any relevant architecture diagrams or data-flow descriptions.",
+        "llm_reasoning": "Without clear technical and data dependencies, teams cannot reliably implement, secure, or maintain the RAG solution, which directly threatens its accuracy and currency in production. Because this affects core functionality and regulatory-sensitive financial content, clarifying these dependencies should be treated as a high-priority documentation fix.",
+        "ranked_at": "2026-06-09T19:33:46.190475"
+      },
+      {
+        "gap_id": "b9eed96a-5d99-4eb0-8700-3a7104ccbd14",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Approach",
+        "description": "The requirement 'User consent for data access' has no justification or rationale linked to it (missing 'justifies' or 'derived_from' relationship).",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "Domain constraint violated: requirement node without rationale link",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "User consent for data access"
+            ],
+            "graph_edges": []
+          },
+          {
+            "source_layer": "graph",
+            "description": "Domain constraint violated: requirement node without rationale link",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Educational tool not financial advice"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 6.5,
+        "impact": 8.5,
+        "confidence": 0.86,
+        "frequency": 2,
+        "final_score": 7.618,
+        "risk_level": "High",
+        "priority_score": 7.618,
+        "affected_entities": [
+          "User consent for data access",
+          "Educational tool not financial advice"
+        ],
+        "root_cause": "The requirement for user consent was added without explicitly tracing it to its underlying legal, ethical, and scope rationale within the chatbot design.",
+        "recommendation": "Create and link a justification node that explicitly derives the 'User consent for data access' requirement from the 'Educational tool not financial advice' constraint and related compliance/privacy drivers (e.g., regulatory obligations, risk posture), and add a short rationale explaining how consent supports the non-advisory, educational scope.",
+        "llm_reasoning": "Because the chatbot operates in a regulated financial-adjacent context, undocumented rationale for consent presents a high risk of misalignment with legal and ethical expectations. The gap is therefore high priority: it doesn’t block implementation today, but it materially weakens traceability and defensibility of the requirement if challenged by compliance or stakeholders.",
+        "ranked_at": "2026-06-09T19:33:46.355407"
+      },
+      {
+        "gap_id": "f7fbfcc0-2375-41e7-abd6-037822590a3c",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Expected Results",
+        "description": "Ambiguous target level of impact and success criteria for the two expected results; the section states what will be measured but not what constitutes a successful outcome or minimum acceptable effect size, making it hard to drive decisions or evaluate the project.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "The section lists questions (“Can we provide more tailored financial support…?”, “Can we help reduce financial stress…?”) and mentions measuring diverted volume and long-term stability, but does not specify thresholds, benchmarks, or decision rules tied to these measures.",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.0,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.563,
+        "risk_level": "High",
+        "priority_score": 7.563,
+        "affected_entities": [],
+        "root_cause": "The Expected Results section focuses on what will be measured but omits explicit success thresholds or minimum effect sizes tied to business objectives.",
+        "recommendation": "Revise the Expected Results section to define clear, quantitative success criteria for each metric (e.g., target ranges and minimum acceptable thresholds for diverted volume, reductions in financial-stress indicators, and improvements in financial-support tailoring), and explicitly link each target to a business decision trigger (e.g., proceed, pivot, or stop) so that outcomes can be objectively evaluated.",
+        "llm_reasoning": "Without concrete success thresholds, the documented results are not actionable and cannot reliably guide go/no-go or investment decisions, which materially degrades the utility of the documentation. Because this project affects both customer financial well-being and operational cost/efficiency, the lack of clear impact targets creates significant business risk if left unresolved, warranting high priority.",
+        "ranked_at": "2026-06-09T19:33:45.742046"
+      },
+      {
+        "gap_id": "2a59db2b-a50a-4095-90c7-e951b31e5af3",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": "Goals",
+        "description": "The phrase “eventually perform actions to simplify money management” is ambiguous about the intended level of autonomy, type of actions (advice only vs. executing transactions), and required controls/approvals. This unclear commitment affects risk assessment, regulatory compliance planning, and system design decisions.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "“…and eventually perform actions to simplify money management.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.0,
+        "impact": 8.5,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.535,
+        "risk_level": "High",
+        "priority_score": 7.535,
+        "affected_entities": [],
+        "root_cause": "The goal statement uses vague, forward-looking language about autonomous actions without specifying scope, authority limits, or control mechanisms.",
+        "recommendation": "Clarify the goal by explicitly defining a 'Capabilities & Autonomy' subsection that distinguishes advisory vs. transaction-executing functionality, enumerates allowed action types (e.g., recommendations, scheduling, payment initiation), specifies required user approvals and limits, and notes any out-of-scope actions for the initial release.",
+        "llm_reasoning": "Because the chatbot operates in a regulated financial domain, ambiguity about autonomy and actions directly affects risk analysis, compliance controls, and core architecture decisions, raising both documentation and operational risk. Resolving this early will prevent misaligned design assumptions between product, engineering, legal/compliance, and risk teams, so it warrants high priority correction.",
+        "ranked_at": "2026-06-09T19:33:46.435439"
+      },
+      {
+        "gap_id": "9ed33c06-8f3f-40fd-b8d6-0aa8b170b79e",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": null,
+        "description": "1 isolated entity/entities have no relationships to the rest of the knowledge graph: Perceived complexity of personal finance.",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "Isolated nodes detected (zero-degree vertices)",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Perceived complexity of personal finance"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 6.5,
+        "impact": 7.0,
+        "confidence": 0.78,
+        "frequency": 1,
+        "final_score": 6.628,
+        "risk_level": "High",
+        "priority_score": 6.628,
+        "affected_entities": [
+          "Perceived complexity of personal finance"
+        ],
+        "root_cause": "The concept of 'Perceived complexity of personal finance' was modeled as a standalone node without being explicitly tied to user needs, chatbot behaviors, or design decisions in the document.",
+        "recommendation": "Create and document explicit relationships from 'Perceived complexity of personal finance' to user personas (e.g., novice budgeters), relevant chatbot features (e.g., simplification explanations, step-by-step guidance), and user outcomes (e.g., reduced anxiety, increased engagement), and update the knowledge graph and section text to reference these links.",
+        "llm_reasoning": "Because perceived complexity is often a primary barrier to adoption for financial tools, leaving it isolated risks missing critical design requirements and measurement criteria for the GenAI chatbot. Given this strong link to user engagement and effectiveness, the gap warrants high priority despite being limited to a single node.",
+        "ranked_at": "2026-06-09T19:33:46.458334"
+      },
+      {
+        "gap_id": "2506f12e-8ccc-4a99-8a8f-c4190c187a5f",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "b1af0134-c448-4b8e-b32e-73adc72f65e6",
+        "document_title": "Supporting financial health with a GenAI chatbot",
+        "affected_document_section": null,
+        "description": "Knowledge graph has 5 disconnected components (silos), suggesting that parts of the documentation are not linked to each other. Components: [['Customers feeling disconnected from financial data', 'Personalized financial insights', 'Personalized financial health insights accessibility', 'Answer complex financial health questions', 'Retrieval-Augmented Generation framework', 'Geldfit', 'Real-time financial data analysis', 'Perform money management actions', 'ING', 'Transform static financial information into conversational guidance', 'Develop GenAI-powered financial assistant', 'Natural Language Understanding component', 'Fragmented static financial information', 'KickstartAI', 'Manual financial tracking burden', 'Bridge gap with LLM-based GenAI solution', 'Nibud'], ['Perceived complexity of personal finance'], ['Financially vulnerable households in the Netherlands', 'Help customers regain control of financial health'], ['Guardrails and privacy testing', 'User consent for data access', 'Educational tool not financial advice', 'Evaluation with wrong or difficult questions'], ['Set up budget alerts', 'Action-oriented agent capabilities', 'Turn automatic savings on']].",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "5 weakly connected components detected",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Customers feeling disconnected from financial data",
+              "Personalized financial insights",
+              "Personalized financial health insights accessibility",
+              "Answer complex financial health questions",
+              "Retrieval-Augmented Generation framework",
+              "Geldfit",
+              "Real-time financial data analysis",
+              "Perform money management actions",
+              "ING",
+              "Transform static financial information into conversational guidance",
+              "Develop GenAI-powered financial assistant",
+              "Natural Language Understanding component",
+              "Fragmented static financial information",
+              "KickstartAI",
+              "Manual financial tracking burden",
+              "Bridge gap with LLM-based GenAI solution",
+              "Nibud",
+              "Perceived complexity of personal finance",
+              "Financially vulnerable households in the Netherlands",
+              "Help customers regain control of financial health",
+              "Guardrails and privacy testing",
+              "User consent for data access",
+              "Educational tool not financial advice",
+              "Evaluation with wrong or difficult questions",
+              "Set up budget alerts",
+              "Action-oriented agent capabilities",
+              "Turn automatic savings on"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 6.5,
+        "impact": 7.0,
+        "confidence": 0.83,
+        "frequency": 1,
+        "final_score": 6.628,
+        "risk_level": "High",
+        "priority_score": 6.628,
+        "affected_entities": [
+          "Customers feeling disconnected from financial data",
+          "Personalized financial insights",
+          "Personalized financial health insights accessibility",
+          "Answer complex financial health questions",
+          "Retrieval-Augmented Generation framework",
+          "Geldfit",
+          "Real-time financial data analysis",
+          "Perform money management actions",
+          "ING",
+          "Transform static financial information into conversational guidance",
+          "Develop GenAI-powered financial assistant",
+          "Natural Language Understanding component",
+          "Fragmented static financial information",
+          "KickstartAI",
+          "Manual financial tracking burden",
+          "Bridge gap with LLM-based GenAI solution",
+          "Nibud",
+          "Perceived complexity of personal finance",
+          "Financially vulnerable households in the Netherlands",
+          "Help customers regain control of financial health",
+          "Guardrails and privacy testing",
+          "User consent for data access",
+          "Educational tool not financial advice",
+          "Evaluation with wrong or difficult questions",
+          "Set up budget alerts",
+          "Action-oriented agent capabilities",
+          "Turn automatic savings on"
+        ],
+        "root_cause": "The document describes users, solution architecture, safeguards, and action capabilities as separate narrative chunks without explicit cross-references or structural links, resulting in a fragmented knowledge graph.",
+        "recommendation": "Create an end-to-end solution overview section (or diagram) that explicitly links user problems and segments to the GenAI/RAG architecture, guardrails/privacy measures, and specific action-oriented capabilities, and then add cross-references in each section back to this overview so all five components are connected.",
+        "llm_reasoning": "The disconnected components obscure how user pain points, technical design, safeguards, and concrete features relate, which degrades the document’s usefulness for readers trying to understand or extend the solution. Because this affects core understanding of the GenAI assistant (rather than minor details), it warrants a high, though not critical, priority fix.",
+        "ranked_at": "2026-06-09T19:33:45.720813"
+      }
+    ],
+    "pipeline_metadata": {
+      "documents_count": 1,
+      "doc_types": [
+        "project_plan"
+      ],
+      "gap_category_breakdown": {
+        "STRUCTURAL": 1,
+        "IMPLICIT_EXPRESSION": 5,
+        "RELATIONAL": 4,
+        "SEMANTIC": 5
+      },
+      "average_priority_score": 7.823,
+      "average_confidence": 0.866,
+      "elapsed_seconds": 24.87,
+      "raw_gaps_detected": 20
+    }
+  },
+  {
+    "report_id": "d700a599-da98-47be-9ff2-ea4a37ab245c",
+    "job_id": "6ecb45d5-3b29-4119-98c0-f8a5001548f9",
+    "generated_at": "2026-06-09T19:34:06.007898",
+    "documents_analyzed": [
+      "Unattended object detection at train stations"
+    ],
+    "total_gaps": 11,
+    "high_risk_count": 11,
+    "medium_risk_count": 0,
+    "low_risk_count": 0,
+    "gaps": [
+      {
+        "gap_id": "c4e77431-3f15-4b23-a7fb-7b02dcc64667",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Results",
+        "description": "The Results section does not state any quantitative performance metrics (e.g., precision/recall, false positive/negative rates, latency) from the proof of concept, nor does it specify baseline values, making it impossible to assess how effective the system actually is or what level of performance is required in production.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "“The proof of concept has proven its effectiveness on video streams. Once being brought to production, the system is expected to: - Reduce the time required for control room personnel to assess - Increase the detection rate of unattended objects - Shorten the time to alert for unattended objects”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 8.5,
+        "impact": 9.0,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 8.498,
+        "risk_level": "High",
+        "priority_score": 8.498,
+        "affected_entities": [],
+        "root_cause": "The Results section was written in qualitative, marketing-style language without aligning to engineering or validation requirements for measurable performance reporting.",
+        "recommendation": "Augment the Results section with a concise metrics subsection that reports the proof-of-concept’s key quantitative KPIs (e.g., precision, recall, false positive/negative rates, detection latency, throughput) against clearly stated baseline values and minimum production-acceptable thresholds, and reference the underlying evaluation dataset and methodology.",
+        "llm_reasoning": "Without explicit performance metrics and baselines, stakeholders cannot judge whether the system is effective enough or safe for production in a safety-critical environment like train stations. This creates a high risk of misinformed go/no-go decisions and misaligned expectations, so the gap requires high-priority remediation.",
+        "ranked_at": "2026-06-09T19:34:04.648375"
+      },
+      {
+        "gap_id": "2b67939c-0359-40c4-8897-b55f5d4ab177",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Privacy measures",
+        "description": "No explicit description of what specific privacy-preserving measures are implemented (e.g., anonymisation methods, data minimisation, retention policies, access controls), leaving unclear how passenger and personnel data are actually protected and how legal/privacy requirements (such as GDPR) are operationalised.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "\"Incorporates privacy-preserving measures to protect passengers and personnel.\" (no further detail on which measures, how they work, or against which risks)",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 8.0,
+        "impact": 9.0,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 8.25,
+        "risk_level": "High",
+        "priority_score": 8.25,
+        "affected_entities": [],
+        "root_cause": "Privacy protections were documented at a marketing or principle level without translating them into concrete, operationally verifiable measures and controls.",
+        "recommendation": "Expand the 'Privacy measures' section to explicitly list and briefly describe the implemented controls (e.g., video anonymisation/pseudonymisation techniques, on-device processing vs. central storage, data minimisation logic, retention periods and deletion procedures, role-based access controls, logging/auditing, DPIA outcomes) and map each to relevant legal/privacy requirements such as GDPR articles, ideally referencing a dedicated Privacy/Data Protection subpage for full details.",
+        "llm_reasoning": "The lack of concrete privacy detail significantly degrades documentation quality because readers cannot understand how legal and ethical requirements are actually met. Given regulatory exposure (e.g., GDPR, CCTV regulations) and reputational risk in a public-transport context, clarifying these measures is operationally critical, making this a high-priority documentation gap.",
+        "ranked_at": "2026-06-09T19:34:05.559990"
+      },
+      {
+        "gap_id": "f8980b62-27ad-4763-8766-78a2cf019b5b",
+        "gap_category": "STRUCTURAL",
+        "gap_type": "Structural Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": null,
+        "description": "Missing required 'project name' section in project_plan document. The project_plan template requires this section to be present and populated.",
+        "evidence_sources": [
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'project name' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "project name"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          },
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'scope' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "scope"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          },
+          {
+            "source_layer": "rule_based",
+            "description": "Required section 'tasks' absent per project_plan template",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "tasks"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.0,
+        "confidence": 0.88,
+        "frequency": 3,
+        "final_score": 8.223,
+        "risk_level": "High",
+        "priority_score": 8.223,
+        "affected_entities": [],
+        "root_cause": "The project_plan template was not properly followed, leading to omission of mandatory foundational sections (project name, scope, tasks).",
+        "recommendation": "Populate the project_plan with a clearly defined 'Project Name' section and add mandatory 'Scope' and 'Tasks' sections that align with the template, then perform a template-compliance check for all project documents before approval.",
+        "llm_reasoning": "Missing project name, scope, and tasks in a required project_plan severely undermine traceability, planning, and alignment with organizational standards, which is critical for operational projects like unattended object detection at train stations. Because this creates immediate risk of confusion, mis-scoping, and execution issues across teams, it warrants a High documentation-fix priority.",
+        "ranked_at": "2026-06-09T19:34:04.880667"
+      },
+      {
+        "gap_id": "e65eee59-f74d-4c96-bf27-9703677b625c",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Approach",
+        "description": "Unclear definition and criteria for what constitutes an ‘unattended object’ in the operational context, including how long an object must be stationary, how ownership is inferred, and how edge cases (e.g., nearby but not touching passengers) are handled. This ambiguity affects how models are trained, evaluated, and how operators interpret alerts.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "“enabling immediate identification of unattended objects” and “The team addressed challenges such as anonymization, object recognition, object tracking and video preprocessing.”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 9.2,
+        "confidence": 0.87,
+        "frequency": 1,
+        "final_score": 8.091,
+        "risk_level": "High",
+        "priority_score": 8.091,
+        "affected_entities": [],
+        "root_cause": "The documentation describes goals and technical challenges but never formalizes the operational definition and decision criteria for what the system must treat as an unattended object.",
+        "recommendation": "Add a dedicated subsection in the Approach (e.g., 'Operational Definition of Unattended Object') that explicitly specifies: (1) the time and distance thresholds for classifying an object as unattended, (2) rules for inferring ownership and handling nearby-but-not-touching passengers, (3) treatment of typical edge cases (e.g., groups, staff, briefly out-of-frame owners), and (4) how these criteria map to training labels, evaluation metrics, and operator alert handling.",
+        "llm_reasoning": "This gap directly affects how the model is labeled, trained, and evaluated, and how operators trust and act on alerts, creating a high risk of inconsistent behavior and misaligned expectations. Because it touches both safety and regulatory concerns in a critical environment (train stations), clarifying these semantics is a high-priority documentation fix.",
+        "ranked_at": "2026-06-09T19:34:05.029275"
+      },
+      {
+        "gap_id": "583cad5e-94dc-40b0-b796-64b7892c856c",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Goals",
+        "description": "The commitments are ambiguous about scope and constraints: it is unclear whether these goals pertain to all NS stations or a subset, what types of safety risks are in scope, and whether there are boundaries or trade-offs (e.g., between safety, privacy, operational efficiency), which can lead to misaligned expectations and conflicting design or operational decisions.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "2. Improve safety and perceived safety on NS stations",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.5,
+        "confidence": 0.82,
+        "frequency": 1,
+        "final_score": 7.783,
+        "risk_level": "High",
+        "priority_score": 7.783,
+        "affected_entities": [],
+        "root_cause": "The goal statement is too high-level and lacks explicit scope, risk categories, and trade-off boundaries, leaving key terms like 'safety' and 'NS stations' undefined.",
+        "recommendation": "Refine the Goals section to explicitly state (1) whether the objectives apply to all NS stations or a defined subset, (2) which safety and security risks are in scope and out of scope, and (3) the intended trade-offs and constraints (e.g., privacy, legal compliance, operational efficiency), preferably via a short 'Scope and Constraints' subsection directly under Goals.",
+        "llm_reasoning": "Ambiguous goals around scope and safety can easily lead to conflicting stakeholder assumptions and misaligned system design, which materially degrades the usefulness and reliability of the documentation. Because this project affects safety, privacy, and operations, clarifying the scope and constraints is critical, justifying a high priority fix.",
+        "ranked_at": "2026-06-09T19:34:04.950036"
+      },
+      {
+        "gap_id": "f1890a85-15e8-42a0-97da-d62b66d98af6",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Approach",
+        "description": "Missing explicit assumptions and operational constraints for the claimed real-time processing capability (e.g., latency targets, hardware/infrastructure requirements, number of parallel camera streams supported, and acceptable degradation modes). Without these, it is impossible to assess feasibility, scalability, or deployment risks.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "“a key feature would be its real-time processing capability. The AI algorithms analyze live camera footage, enabling immediate identification of unattended objects. Real-time analysis allows for a swift human response…”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.5,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 7.783,
+        "risk_level": "High",
+        "priority_score": 7.783,
+        "affected_entities": [],
+        "root_cause": "Real-time claims were documented as high-level marketing statements without being translated into explicit, measurable technical assumptions and constraints.",
+        "recommendation": "Augment the Approach section with a dedicated 'Real-time Performance Assumptions and Constraints' subsection that specifies target end-to-end latency (e.g., per frame/alert), reference hardware and network profiles, maximum number of concurrent camera streams per node, scalability assumptions (e.g., horizontal scaling model), and clearly defined acceptable degradation modes when targets cannot be met.",
+        "llm_reasoning": "The gap significantly degrades documentation quality because it prevents readers from evaluating whether the real-time claims are technically credible or reproducible in their environment. It poses high business and operational risk by obscuring scalability limits and failure behaviors, which can lead to under-provisioned deployments and unmet service expectations at live train stations.",
+        "ranked_at": "2026-06-09T19:34:06.007540"
+      },
+      {
+        "gap_id": "99293bf5-200f-4dc5-a93c-65d5f3acc8e9",
+        "gap_category": "RELATIONAL",
+        "gap_type": "Relational Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Making Dutch railway stations safer",
+        "description": "The decision 'Bring system into production' has no justification or rationale linked to it (missing 'justifies' or 'derived_from' relationship).",
+        "evidence_sources": [
+          {
+            "source_layer": "graph",
+            "description": "Domain constraint violated: decision node without rationale link",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": [
+              "Bring system into production"
+            ],
+            "graph_edges": []
+          }
+        ],
+        "severity": 7.5,
+        "impact": 8.0,
+        "confidence": 0.84,
+        "frequency": 1,
+        "final_score": 7.563,
+        "risk_level": "High",
+        "priority_score": 7.563,
+        "affected_entities": [
+          "Bring system into production"
+        ],
+        "root_cause": "The production-go decision was recorded without linking it to the underlying requirements, evaluations, or design decisions that justify it.",
+        "recommendation": "Create or identify a formal decision record for 'Bring system into production' and link it via a 'justifies' or 'derived_from' relationship to the relevant safety requirements, pilot evaluation results, and risk assessments in the unattended object detection project.",
+        "llm_reasoning": "A production decision for safety-critical technology at train stations without explicit justification poses high documentation and audit risk, especially for compliance and post-incident analysis. Because it affects live operations and passenger safety, establishing and documenting traceability for this decision should be treated as a high-priority fix.",
+        "ranked_at": "2026-06-09T19:34:04.575856"
+      },
+      {
+        "gap_id": "cc5477ef-9fb0-476a-9602-b8f86f916105",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Privacy measures",
+        "description": "The phrase \"Incorporates privacy-preserving measures\" is an ambiguous commitment: it asserts compliance in general terms without specifying scope or guarantees (e.g., what types of data are protected, under which conditions, and against which threats), making it hard to assess whether the system’s design and deployment decisions truly meet privacy and regulatory requirements.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "\"Incorporates privacy-preserving measures to protect passengers and personnel.\" (broad commitment without concrete definitions, boundaries, or success criteria)",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.0,
+        "impact": 8.5,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 7.535,
+        "risk_level": "High",
+        "priority_score": 7.535,
+        "affected_entities": [],
+        "root_cause": "Privacy requirements were documented as high-level assurances instead of concrete, testable specifications tied to regulatory and threat models.",
+        "recommendation": "Replace the vague statement with a dedicated 'Privacy and Data Protection' subsection that (1) explicitly enumerates protected data types (e.g., video streams, metadata, identities), (2) defines privacy-preserving mechanisms used (e.g., on-device blurring, data minimization, retention limits, access controls, encryption), (3) maps these measures to applicable regulations and threat scenarios, and (4) states clear, testable success criteria or KPIs for privacy compliance.",
+        "llm_reasoning": "Given the regulatory sensitivity of video-surveillance in public transport, an ambiguous privacy commitment represents a significant compliance and trust risk, justifying a high priority fix. Clarifying scope and concrete controls will materially reduce legal exposure and implementation misalignment, while being relatively contained as a documentation change that can reference existing security and legal artefacts.",
+        "ranked_at": "2026-06-09T19:34:05.232747"
+      },
+      {
+        "gap_id": "19ba7c0a-f5aa-4097-b196-eb9f27927b15",
+        "gap_category": "SEMANTIC",
+        "gap_type": "Semantic Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Results",
+        "description": "The phrasing of expected benefits uses vague, relative statements (reduce/increase/shorten) without specifying target thresholds or acceptance criteria, creating ambiguity about what commitments are being made to stakeholders and what constitutes success in production.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine semantic gap",
+            "raw_evidence": "“Once being brought to production, the system is expected to: - Reduce the time required for control room personnel to assess - Increase the detection rate of unattended objects - Shorten the time to alert for unattended objects”",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.0,
+        "impact": 8.5,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.535,
+        "risk_level": "High",
+        "priority_score": 7.535,
+        "affected_entities": [],
+        "root_cause": "Expected benefits were drafted as qualitative aspirations rather than quantified, testable objectives aligned with stakeholder expectations and operational KPIs.",
+        "recommendation": "Rewrite the Results/benefits section to specify measurable targets and acceptance criteria (e.g., baseline and goal values, timeframes, and minimum thresholds for success) for each benefit, and link them to existing station KPIs so stakeholders can clearly assess production readiness and success.",
+        "llm_reasoning": "The gap significantly degrades clarity because it prevents readers from understanding what concrete outcomes the system must achieve to be considered successful. Given that this can lead to misaligned expectations, unverifiable ‘success’ claims, and disputes at go-live or audit time, it warrants a High priority fix.",
+        "ranked_at": "2026-06-09T19:34:05.069859"
+      },
+      {
+        "gap_id": "51dc5853-3f96-423c-aa98-3b2e643cf47b",
+        "gap_category": "IMPLICIT_EXPRESSION",
+        "gap_type": "Implicit Expression Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Goals",
+        "description": "The goals do not specify any measurable or operational success criteria (e.g., KPIs, thresholds, or concrete target states) for workload reduction, safety improvement, or AI expertise enhancement, making it impossible to objectively assess whether the project has achieved its objectives or to guide trade-off decisions.",
+        "evidence_sources": [
+          {
+            "source_layer": "semantic",
+            "description": "LLM+cosine implicit_expression gap",
+            "raw_evidence": "1. Reduce the workload of the control room\n2. Improve safety and perceived safety on NS stations\n3. Enhance NS's expertise in using AI",
+            "matched_keyword": null,
+            "missing_fields": null,
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.0,
+        "impact": 8.0,
+        "confidence": 0.9,
+        "frequency": 1,
+        "final_score": 7.315,
+        "risk_level": "High",
+        "priority_score": 7.315,
+        "affected_entities": [],
+        "root_cause": "Goals were captured at a strategic, aspirational level without being translated into measurable, operational success criteria.",
+        "recommendation": "Augment the Goals section with a short 'Success Criteria & KPIs' subsection that defines concrete, quantifiable targets (e.g., percentage reduction in control room incident handling time, minimum detection precision/recall thresholds, safety perception survey deltas, and specific AI capability milestones) and link these to how trade-off decisions should be made.",
+        "llm_reasoning": "Without measurable goals, stakeholders cannot objectively determine if workload reduction, safety improvement, or AI expertise enhancement have been achieved, which materially degrades the usefulness of the documentation. Because the project affects operational safety and resource allocation, the risk of misalignment or incorrect go/no-go decisions is high, warranting a High priority fix.",
+        "ranked_at": "2026-06-09T19:34:05.141875"
+      },
+      {
+        "gap_id": "d6fe7688-dd83-46c8-bf2f-603c71f68d34",
+        "gap_category": "STRUCTURAL",
+        "gap_type": "Structural Gap",
+        "document_id": "471b9484-3117-43d8-80d6-e5e387f5af0e",
+        "document_title": "Unattended object detection at train stations",
+        "affected_document_section": "Key features",
+        "description": "Required section 'Key features' exists but contains insufficient content (fewer than 10 words).",
+        "evidence_sources": [
+          {
+            "source_layer": "rule_based",
+            "description": "Section present but effectively empty",
+            "raw_evidence": null,
+            "matched_keyword": null,
+            "missing_fields": [
+              "Key features"
+            ],
+            "graph_nodes": null,
+            "graph_edges": null
+          }
+        ],
+        "severity": 7.0,
+        "impact": 7.5,
+        "confidence": 0.86,
+        "frequency": 1,
+        "final_score": 7.095,
+        "risk_level": "High",
+        "priority_score": 7.095,
+        "affected_entities": [],
+        "root_cause": "The required 'Key features' section was treated as a placeholder and never populated with substantive content.",
+        "recommendation": "Populate the 'Key features' section with a concise, bullet-point list (5–10 items) summarizing the system’s main capabilities, including detection scope, accuracy/latency expectations, alerting mechanisms, integrations with station systems, privacy/compliance considerations, and operational constraints.",
+        "llm_reasoning": "A nearly empty 'Key features' section deprives readers of a quick, shared understanding of what the unattended object detection solution actually does, leading to misaligned expectations between stakeholders, implementers, and operators. Because this system affects safety, security, and operations at train stations, missing high-level feature clarity poses a material risk to design decisions, integrations, and acceptance criteria, warranting a High priority fix.",
+        "ranked_at": "2026-06-09T19:34:04.707316"
+      }
+    ],
+    "pipeline_metadata": {
+      "documents_count": 1,
+      "doc_types": [
+        "project_plan"
+      ],
+      "gap_category_breakdown": {
+        "IMPLICIT_EXPRESSION": 4,
+        "STRUCTURAL": 2,
+        "SEMANTIC": 4,
+        "RELATIONAL": 1
+      },
+      "average_priority_score": 7.788,
+      "average_confidence": 0.875,
+      "elapsed_seconds": 19.47,
+      "raw_gaps_detected": 13
+    }
+  }
+]
